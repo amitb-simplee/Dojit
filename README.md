@@ -1,3 +1,5 @@
+Heroku app name: infinite-scrubland-90907
+
 Usage:
   rails new APP_PATH [options]
 
