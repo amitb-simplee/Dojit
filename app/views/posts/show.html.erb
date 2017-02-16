@@ -13,6 +13,8 @@
   <br/><br/>
   <h4>Enter Comment</h4>
   <div class="col-md-4">
+    <% if policy(Post.new).create? %>
       <%= render partial: 'comments/form', locals: { topic: @topic, post: @post , comment: @post.comments.new } %>
+    <% end %>
   </div>
 </div>
