@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   # attr_accessible :title, :body
- attr_accessible :name, :email, :password, :password_confirmation, :posts
+ attr_accessible :name, :email, :password, :password_confirmation, :posts, :role
  
  def admin?
    role == 'admin'
