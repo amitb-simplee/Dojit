@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
   validates :topic, presence: true
   validates :user, presence: true
 
-  after_create :create_vote
+  # after_create :create_vote
 
   attr_accessible :body, :title, :user, :topic, :created_at
 
@@ -32,6 +32,11 @@ class Post < ActiveRecord::Base
  
      update_attribute(:rank, new_rank)
    end
+  
+  def create_vote
+    user.votes.create(value: 1, post: self)
+  end
+
 
   private
   
@@ -43,8 +48,5 @@ class Post < ActiveRecord::Base
 	  render_as_markdown body
 	end
 
-  def create_vote
-    up_votes
-    self.save
-  end
+
 end
