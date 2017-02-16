@@ -5,7 +5,8 @@ gem 'rails', '3.2.22.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
+gem 'faker'
+gem 'devise'
 
 group :production do
   gem 'pg'
@@ -17,8 +18,12 @@ group :development do
   gem 'byebug'
 end
 
-gem 'faker'
-gem 'devise'
+
+
+group :test do
+  gem 'rspec-rails', '~> 3.1.0'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
