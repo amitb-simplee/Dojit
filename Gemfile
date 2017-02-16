@@ -38,6 +38,7 @@ gem 'test-unit', '~> 3.0'
 gem 'strong_parameters'
 gem 'jquery-rails'
 gem 'pundit'
+gem 'will_paginate'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
